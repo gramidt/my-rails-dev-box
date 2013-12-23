@@ -19,5 +19,5 @@ Databases
 * MongoDB
 
 Caching
-* Memcached
+* Redis
 

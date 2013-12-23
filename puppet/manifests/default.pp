@@ -72,22 +72,30 @@ package { 'mongodb':
 #  onlyif  => '/bin/grep -qx  "bind_ip = 127.0.0.1" /etc/mongodb.conf',
 #}
 
-# --- Memcached -----------------------------------------------------------------
+# --- Redis  --------------------------------------------------------------------
 
-class { 'memcached': }
+class { 'redis':
+  version => '2.6.5',
+}
 
 # --- Packages ------------------------------------------------------------------
 
-package { 'curl':
-  ensure => installed
+if !defined(Package['curl']) {
+  package { 'curl':
+    ensure => installed
+  }
 }
 
-package { 'build-essential':
-  ensure => installed
+if !defined(Package['build-essential']) {
+  package { 'build-essential':
+    ensure => installed
+  }
 }
 
-package { 'git-core':
-  ensure => installed
+if !defined(Package['git-core']) {
+  package { 'git-core':
+    ensure => installed
+  }
 }
 
 # Nokogiri dependencies
