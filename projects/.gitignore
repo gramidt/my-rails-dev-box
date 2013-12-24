@@ -1,0 +1,5 @@
+# Ignore everything in this directory, since 
+# this is where our projects will reside. 
+*
+# Keep the ignore file though.
+!.gitignore
