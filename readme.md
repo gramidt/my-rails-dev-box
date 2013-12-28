@@ -54,7 +54,8 @@ is navigate to the projects folder and start your normal project workflow.
 
 ## Additional Notes
 
-- You can log into postgres by 
+- You can log into postgres by
+
     sudo -u postgres psql postgres
 
 
