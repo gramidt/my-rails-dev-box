@@ -13,11 +13,11 @@ Source Control
 Databases
 * SQLite
 * MySQL
-* Postgres
+* PostgreSQL (9.1)
 * MongoDB
 
 Caching
-* Redis
+* Redis (2.6.5)
 
 ## What are the requirements to get up and running?
 
@@ -54,8 +54,17 @@ is navigate to the projects folder and start your normal project workflow.
 
 ## Additional Notes
 
-- You can log into postgres by
+PostgreSQL
 
+    # login
     sudo -u postgres psql postgres
+    
+    # create user
+    sudo -u postgres createuser -s <username>
+    
+    # set password
+    ALTER USER <username> WITH PASSWORD ‘<newpassword>’;
 
+
+    
 
