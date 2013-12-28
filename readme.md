@@ -52,5 +52,9 @@ is navigate to the projects folder and start your normal project workflow.
 
     vagrant@my-rails-dev-box:~$ cd /vagrant/projects
 
+## Additional Notes
+
+- You can log into postgres by 
+    sudo -u postgres psql postgres
 
 
