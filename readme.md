@@ -19,6 +19,9 @@ Databases
 Caching
 * Redis (2.6.5)
 
+Misc.
+* Qt
+
 ## What are the requirements to get up and running?
 
 * [VirtualBox] (https://www.virtualbox.org)

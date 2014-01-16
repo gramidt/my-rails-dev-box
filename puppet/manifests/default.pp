@@ -133,3 +133,8 @@ exec { 'install_bundler':
   creates => "${home}/.rvm/bin/bundle",
   require => Exec['set_default_ruby']
 }
+
+exec { 'install_qt':
+  command => "sudo apt-get -y install libqtwebkit-dev",
+  logoutput => on_failure
+}
