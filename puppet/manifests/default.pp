@@ -136,5 +136,4 @@ exec { 'install_bundler':
 
 exec { 'install_qt':
   command => "sudo apt-get -y install libqtwebkit-dev",
-  logoutput => on_failure
 }
