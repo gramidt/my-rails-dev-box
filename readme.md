@@ -4,7 +4,7 @@
 
 Ruby / Rails 
 * RVM
-* Ruby 2.0.0
+* Ruby 2.0.0 & 2.1.0
 * Bundler
 
 Source Control
