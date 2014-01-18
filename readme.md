@@ -44,7 +44,7 @@ After the installation has finished, you can access the magical box with
     host $ vagrant ssh
     Welcome to Ubuntu 12.04 LTS (GNU/Linux 3.2.0-23-generic x86_64)
     ...
-    vagrant@my-rails-dev-box:~$
+    vagrant@my-rails-dev-box:/vagrant/projects$ 
 
 Given that port 3000 is the default port for new Rails apps, we went ahead and forwarded that port to the magical box, so you can access your web applications from your host machine.
 
