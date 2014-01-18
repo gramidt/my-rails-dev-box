@@ -21,6 +21,7 @@ Caching
 
 Misc.
 * Qt
+* MailCatcher
 
 ## What are the requirements to get up and running?
 
@@ -54,6 +55,16 @@ Well it turns out that Vagrant mounts the my-rails-dev-box directory as _/vagran
 just start working directly out of the current directory which happens to be _/vagrant/projects_ after running _vagrant ssh_. 
 
 ## Additional Notes
+
+MailCatcher
+
+Add the following to your 'environment/development.rb', and MailCatcher will catch any
+outgoing mail.
+    
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = { :address => "localhost", :port => 1025 }
+
+You can then access it by going to _http://localhost:1080_.
 
 PostgreSQL
 

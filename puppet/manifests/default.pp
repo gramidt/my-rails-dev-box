@@ -137,3 +137,13 @@ exec { 'install_bundler':
 exec { 'install_qt':
   command => "sudo apt-get -y install libqtwebkit-dev",
 }
+
+exec { 'install_mailcatcher':
+  command => "${as_vagrant} '${home}/.rvm/bin/rvm default@mailcatcher --create do gem install mailcatcher && rvm wrapper default@mailcatcher --no-prefix mailcatcher catchmail'",
+  require => Exec['install_rvm']
+}
+
+exec { 'start_mailcatcher':
+  command => "${as_vagrant} '${home}/.rvm/bin/rvm gemset use mailcatcher && mailcatcher --ip=0.0.0.0'",
+  require => Exec['install_mailcatcher']
+}
