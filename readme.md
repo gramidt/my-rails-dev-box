@@ -50,10 +50,8 @@ Given that port 3000 is the default port for new Rails apps, we went ahead and f
 
 ## This seems like voodoo. How do you expect me to work on a magical box from my host machine?
 
-Well it turns out that Vagrant mounts the my-rails-dev-box directory as _/vagrant_ within the magical box. So all you'll need to do 
-is navigate to the projects folder and start your normal project workflow.
-
-    vagrant@my-rails-dev-box:~$ cd /vagrant/projects
+Well it turns out that Vagrant mounts the my-rails-dev-box directory as _/vagrant_ within the magical box. So with a little additional black  magic (aka. one liner bash script), you can 
+just start working directly out of the current directory which happens to be _/vagrant/projects_ after running _vagrant ssh_. 
 
 ## Additional Notes
 
