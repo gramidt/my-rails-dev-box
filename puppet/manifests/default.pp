@@ -142,8 +142,3 @@ exec { 'install_mailcatcher':
   command => "${as_vagrant} '${home}/.rvm/bin/rvm ruby-2.0.0@mailcatcher --create do gem install mailcatcher && rvm wrapper ruby-2.0.0@mailcatcher --no-prefix mailcatcher catchmail'",
   require => Exec['install_rvm']
 }
-
-exec { 'start_mailcatcher':
-  command => "${as_vagrant} '${home}/.rvm/bin/rvm gemset use mailcatcher && mailcatcher --ip=0.0.0.0'",
-  require => Exec['install_mailcatcher']
-}

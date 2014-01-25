@@ -64,7 +64,7 @@ outgoing mail.
     config.action_mailer.delivery_method = :smtp
     config.action_mailer.smtp_settings = { :address => "localhost", :port => 1025 }
 
-You can then access it by going to _http://localhost:1080_.
+Then all you have to do is run _mailcatcher --ip=0.0.0.0_, and you can access the application at  _http://localhost:1080_.
 
 PostgreSQL
 
