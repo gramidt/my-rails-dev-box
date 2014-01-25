@@ -7,6 +7,11 @@ Vagrant.configure("2") do |config|
 
   # MailCatcher default HTTP port.
   config.vm.network :forwarded_port, guest: 1080, host: 1080
+  
+  config.vm.provider "virtualbox" do |vb|
+    vb.customize ["modifyvm", :id, "--cpuexecutioncap", "50"]
+    vb.customize ["modifyvm", :id, "--memory", "1024"]
+  end
 
   config.vm.provision :puppet do |puppet|
     puppet.manifests_path = 'puppet/manifests'
