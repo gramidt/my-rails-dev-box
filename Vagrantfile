@@ -4,10 +4,11 @@ Vagrant.configure("2") do |config|
   config.vm.host_name = 'my-rails-dev-box'
 
   config.vm.network :forwarded_port, guest: 3000, host: 3000
+  config.vm.network :forwarded_port, guest: 4567, host: 4567
 
   # MailCatcher default HTTP port.
   config.vm.network :forwarded_port, guest: 1080, host: 1080
-  
+
   config.vm.provider "virtualbox" do |vb|
     vb.customize ["modifyvm", :id, "--cpuexecutioncap", "50"]
     vb.customize ["modifyvm", :id, "--memory", "1024"]
