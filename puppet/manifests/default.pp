@@ -138,6 +138,12 @@ exec { 'install_qt':
   command => "sudo apt-get -y install libqtwebkit-dev",
 }
 
+# Needed for running Capybara-webkit
+exec { 'install_xvfb':
+  command => "sudo apt-get -y install xvfb",
+  require => Exec['install_qt']
+}
+
 exec { 'install_mailcatcher':
   command => "${as_vagrant} '${home}/.rvm/bin/rvm ruby-2.0.0@mailcatcher --create do gem install mailcatcher && rvm wrapper ruby-2.0.0@mailcatcher --no-prefix mailcatcher catchmail'",
   require => Exec['install_rvm']
