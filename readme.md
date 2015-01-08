@@ -4,7 +4,7 @@
 
 Ruby / Rails
 * RVM
-* Ruby 2.0.0 & 2.1.0
+* Ruby 2.0.0, 2.1.0, & 2.2.0
 * Bundler
 
 Source Control
@@ -49,7 +49,7 @@ After the installation has finished, you can access the magical box with
 
 Given that port 3000 is the default port for new Rails apps, we went ahead and forwarded that port to the magical box, so you can access your web applications from your host machine.
 
-NOTICE: If you are using Rails 4.2 and greater, you need to use _rails s -b 0.0.0.0_ to start the server, as the Rails 4.2 changed the listening address default from 0.0.0.0 to localhost. 
+NOTICE: If you are using Rails 4.2 and greater, you need to use _rails s -b 0.0.0.0_ to start the server, as the Rails 4.2 changed the listening address default from 0.0.0.0 to localhost.
 
 ## This seems like voodoo. How do you expect me to work on a magical box from my host machine?
 
