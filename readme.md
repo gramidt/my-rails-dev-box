@@ -1,3 +1,5 @@
+# No longer supported. Long live Docker!
+
 # A Virtual Machine to Jump Start Your Ruby on Rails Development
 
 ## What's in this magical box?
